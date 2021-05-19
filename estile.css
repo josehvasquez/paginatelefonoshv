@@ -1,0 +1,444 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Raleway', sans-serif; /* Tipo de letra*/
+	color:#333; /* Color del texto*/
+	font-size: 1.2rem; /* Tamaño de texto*/
+	line-height: 1.6em; /* Interlineado del texto*/
+	margin: 0; /*Bode de la pagina*/
+
+}
+h1{
+	line-height: 1.3em; /*Interlineado del H1*/
+	font-style: 2rem; /*Tamaño del H1*/
+}
+p{
+	margin-bottom: 1.6em; /* Margen inferior*/
+}
+
+.container{
+	width: 85%;/*acho del navegador*/
+	max-width: 850px; /*que no se extienda mas de 850px*/
+	margin: 0 auto; /*0 arriba y abajo y centrado*/
+}
+
+.header{
+	background: #333; /*Fondo del header*/
+	color: white;
+	padding: 0.8rem 0;
+}
+
+.header a {
+	color:white; /*Color de los enlaces*/
+	text-decoration: none; /*Eliminar el subrayado*/
+	padding: 2rem 0; /*relleno*/
+}
+
+.logo-nav-container{
+	display: flex; /*Que los elementos una a la izq y otro a la derecha*/
+	justify-content: space-between; /*que se separen*/
+	align-items: center;/*hacer que queden centrados*/
+	flex-wrap: wrap;
+}
+
+.logo{
+	letter-spacing: 15px;
+	font-size: 1.4em;
+}
+
+
+.navigation	ul{
+	margin: 0;
+	padding: 0;
+	list-style: none; /*quitarle los puntos de lista*/
+}
+
+
+	.navigation	ul li {
+		display: inline-block;
+
+	}
+
+		.navigation	ul li a {
+			display: block; /*que los elementos queden uno a lado del otro*/
+			padding: 0.5rem 1rem; /*que los elementos se separen*/
+			transition: all 0.4s linear;/*Agregar animacion*/
+			border-radius: 5px;/*quitar las esquinas*/
+		}
+
+		.navigation	ul li a:hover{
+			background: #4a4a4a;/*al pasar el cursor cambie el fondo*/
+		}
+
+.main{
+	margin-top: 10rem;
+}
+
+.footer{
+	background: #f2f2f2;
+	padding: 2rem 0;
+	text-align: center;
+	margin-top: 6rem;
+}
+
+.titulo{
+	text-align: center;
+	font-size: 60px;
+}
+
+
+/*estilos galeria*/
+
+.galeria{
+	width: 90%;
+	margin: auto;
+	list-style: none;
+	padding: 20px;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.galeria li {
+	margin: 5px;
+}
+
+.galeria img{
+	width: 150px;
+	height: 100px;
+}
+
+
+/*Estilos del modal*/
+
+.modal{
+	display: none;
+
+}
+
+.modal:target {
+	display: block;
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+
+.modal h3{
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.imagen{
+	width: 100%;
+	height: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagen a{
+	color: #fff;
+	font-size: 40px;
+	text-decoration: none;
+	margin:0 10px;
+}
+
+
+.imagen a:nth-child(2) {
+	margin: 0;
+	height: 100%
+	flex-shrink: 2; /*tamaño de proporcion*/
+}
+
+
+.imagen img{
+	width: 500px;
+	height:100%;
+	max-width: 100%;
+	border: 7px solid #fff;
+	box-sizing: border-box;
+}
+
+.cerrar {
+	display: block;
+	background: #fff;
+	width: 25px;
+	height: 25px;
+	margin: 15px auto;
+	text-align: center;
+	text-decoration: none;
+	font-size: 25px;
+	color: #000;
+	padding: 5px;
+	border-radius: 50%;
+	line-height: 25px;
+}
+
+
+
+/*Estilos del formulario*/
+.contenedor .form .form-header .form-title{
+	font-weight: normal;
+	font-family: 'Raleway', sans-serif;
+	color: #ff851b;
+	text-align: center;
+	padding: 14px 0;
+}
+
+.contenedor .form .form-header .form-title span{
+	color: #fff;
+}
+
+.contenedor .form {
+	background: rgba(0,0,0,0.8);/*Color de fondo de la caja del formulario*/
+	width: 90%;
+	max-width: 650px;
+	margin: auto;
+	padding: 5px 35px;
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+}
+
+
+.contenedor .form .form-label{
+	display: block;
+	color: #ff851b;/*Color de texto de las etiquetas*/
+	font-size: 16px; /*Tamaño de texto de las etiquetas*/
+	font-family: 'Raleway', sans-serif; /*Tipo de fuente de las etiquetas*/
+	position: relative;/*posiscion del elemento de acuerdo a los demas elementos*/
+}
+
+
+.contenedor .form .form-input, .form-textarea{
+	background: rgba(0,0,0,0.7); /*Color de fondo de la caja de texto*/
+	border: none; /*quitar el borde*/
+	outline: none;
+	border-bottom: 2px solid #ff851b;/*Linea debajo del cuadro de texto*/
+	width: 100%;/*Ancho de las cajas respecto al formulario*/
+	padding: 12px; /*Espaciado entre las cajas*/
+	margin-bottom: 20px;
+	border-radius: 2px; /*Quitarle las esquinas a las cajas*/
+	font-size: 16px; /*tamaño de texto*/
+	color: #fff;/*Color de letra del campo de texto*/
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.contenedor .form  .form-textarea{ /*edicion de la caja de texto*/
+	resize: vertical;/*redimencionar verticalmente*/
+	max-height: 150px;/*Alto maximo de la caja*/
+	min-height: 50px; /*alto minimo de la caja*/
+}
+
+.contenedor .form .btn-submit{
+	width: 100%;
+	font-family: 'Raleway', sans-serif;
+	outline: none;
+	background: #ff851b; /*Color del fondo del boton*/
+	font-size: 16px;
+	border:none;
+	color: #fff;
+	padding: 15px 0;
+	cursor: pointer; /*cuando se pase el cursor sobre el boton cambiar el puntero*/
+	transition: all .5s ease; /*Transisicon del boton*/
+}
+
+.contenedor .form .btn-submit:hover{
+	background: #f29718; /*carle color al boton cuando se pase sobre el*/
+}
+
+
+
+/* Main acerca*/
+.contenedor2{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 52px 0;
+
+    
+    color: white;
+}
+.sobre-nosotros {
+    text-align: center;
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+    margin-top: 50px;
+}
+
+.slogan {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.parrafo {
+    margin-bottom: 13px;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 24px;
+    color: white;
+}
+.acerca-de {
+	background-image: url(imagenes/Skewed.png);
+}
+.acerca-de .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 128px;
+    font-weight: 300;
+    border: 1px solid rgba(24, 16, 16, .7);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+/*.galeria2 {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes {
+    width: 20%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+*/
+.encima {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.815);
+}
+
+.encima h2 {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: #fff;
+}
+
+.encima div {
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: #fff;
+    margin: auto;
+}
+
+.cards {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 20px 0;
+    width: 30%;
+    height: 250px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
+}
+
+.cards img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.fondo {
+    height: 900px;
+    position: relative;
+    background-image: url(imagenes/fondo.png);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+}
+
+.sesgoabajo-unico {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 35vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #2c3e50 transparent;
+}
+
+.titulo-patrocinadores,
+.subtitulo-patrocinadores {
+    color: #fff;
+    text-align: center;
+}
+
+.titulo-patrocinadores {
+    font-size: 56px;
+    margin-top: 48px;
+}
+
+.subtitulo-patrocinadores {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 64px;
+
+    margin-top: 30px;
+}
+
+.clientes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cliente {
+    width: 30%;
+}
+
+.cliente img {
+    width: 100%;
+}
